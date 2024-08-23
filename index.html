@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abraham's Portfolio</title>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,7 +14,7 @@
     />
   </head>
   <body>
-    <div class="home-section">
+    <div id="home" class="home-section">
       <div class="left-side">
         <h1>PORTFOLIO.</h1>
         <div class="block" id="block1"></div>
@@ -27,15 +28,15 @@
       </div>
       <div class="right-side">
         <div class="navbar">
-          <a href="">HOME</a>
-          <a href="">ABOUT</a>
-          <a href="">PROJECTS</a>
+          <a href="#home" class="nav-link">HOME</a>
+          <a href="#about" class="nav-link">ABOUT</a>
+          <a href="#projects" class="nav-link">PROJECTS</a>
         </div>
         <img src="imgs/me_pic.jpg" alt="" />
       </div>
     </div>
 
-    <div class="about-section">
+    <div id="about" class="about-section">
       <div class="about-img">
         <img src="imgs/gaming.jpg" alt="" />
       </div>
@@ -60,6 +61,16 @@
       </div>
     </div>
 
-    <div class="projects-section"></div>
+    <div id="projects" class="projects-section">
+      <h1>PROJECTS</h1>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+    </div>
   </body>
 </html>
