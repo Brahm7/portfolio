@@ -206,9 +206,9 @@ h3 {
   }
 
   .left-side {
-    height: 300px;
-
-    padding-top: 80px;
+    height: 240px;
+    padding-top: 70px;
+    padding-bottom: 200px;
   }
 
   .navbar {
@@ -218,10 +218,10 @@ h3 {
     top: 0;
     width: 100%;
     background-color: var(--lightColor);
+    z-index: 10; /* Ensure navbar is on top */
   }
 
   .right-side {
-    height: 500px;
     background-color: var(--darkColor);
     display: flex;
     flex-direction: column-reverse; /* Reverses the order of the children */
@@ -253,6 +253,7 @@ h3 {
     flex-direction: column;
     padding-top: 60px;
     height: auto;
+    margin-bottom: 20px; /* Ensure there's space for following elements */
   }
 
   .about-img {
@@ -274,14 +275,36 @@ h3 {
     height: auto;
   }
 
+  .projects-section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20px 0; /* Ensure space above and below */
+  }
+
   .projects-section h1 {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
   }
 
   .grid-container {
+    display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 200px); /* Adjust height to fit items */
     width: 90%;
-    height: auto;
+    height: auto; /* Allow the container to grow as needed */
+    gap: 120px;
+    justify-items: center; /* Center grid items horizontally */
+    align-items: center; /* Center grid items vertically */
+  }
+
+  .grid-item {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
+
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
   }
 }
