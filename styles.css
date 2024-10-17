@@ -109,7 +109,7 @@ h3 {
 
 .about-section {
   display: flex;
-  padding-top: 140px;
+  padding-top: 100px;
   justify-content: center;
   height: 75vh;
   background-color: var(--lightGrey);
@@ -165,28 +165,33 @@ h3 {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  height: 95vh;
+  height: 85vh;
 }
 
 .projects-section h1 {
-  margin-bottom: 100px;
+  margin-top: -30px;
+  margin-bottom: 30px;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  width: 700px;
-  height: 500px;
+.projects-container {
+  display: flex;
+  gap: 20px;
 }
 
-.grid-item {
+.project-item {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--lightGrey);
   border-radius: 4px;
+  width: 350px;
+  height: 350px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 1049px) {
@@ -214,7 +219,7 @@ h3 {
   .navbar {
     align-items: flex-start;
     padding: 10px 20px;
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     background-color: var(--lightColor);
@@ -277,34 +282,13 @@ h3 {
 
   .projects-section {
     display: flex;
-    justify-content: center;
     flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding: 20px 0; /* Ensure space above and below */
+    margin-top: 300px;
   }
 
-  .projects-section h1 {
-    margin-bottom: 70px;
-  }
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 200px); /* Adjust height to fit items */
-    width: 90%;
-    height: auto; /* Allow the container to grow as needed */
-    gap: 120px;
-    justify-items: center; /* Center grid items horizontally */
-    align-items: center; /* Center grid items vertically */
-  }
-
-  .grid-item {
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
-
+  .projects-container {
     display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
+    flex-direction: column;
+    padding-bottom: 20px;
   }
 }
