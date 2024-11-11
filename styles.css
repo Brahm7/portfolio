@@ -52,6 +52,22 @@
 .introduction {
   margin-top: 40vh;
   margin-left: 10%;
+  animation: leFlyInLeft 2s ease-in-out forwards;
+}
+
+@keyframes leFlyInLeft {
+  0% {
+    transform: translate(-40px, 0px);
+    opacity: 0;
+  }
+  50% {
+    transform: translate(40px, 0px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
 }
 
 .introduction h2 {
@@ -84,6 +100,18 @@ h3 {
 .navbar {
   display: flex;
   justify-content: center;
+  animation: slideDown 1s ease-out forwards;
+}
+
+@keyframes slideDown {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .navbar a {
@@ -109,7 +137,7 @@ h3 {
 
 .about-section {
   display: flex;
-  padding-top: 100px;
+  padding-top: 155px;
   justify-content: center;
   height: 75vh;
   background-color: var(--lightGrey);
@@ -169,13 +197,18 @@ h3 {
 }
 
 .projects-section h1 {
-  margin-top: -30px;
-  margin-bottom: 30px;
+  margin-top: -15vh;
+  margin-bottom: 100px;
 }
 
 .projects-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+}
+
+.projects-container a {
+  text-decoration: none;
+  color: #171717;
 }
 
 .project-item {
@@ -190,8 +223,21 @@ h3 {
 }
 
 .project-item:hover {
-  transform: scale(1);
+  transform: scale(1.1);
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#travel-gallery {
+  background-image: url(imgs/travel-gallery-screenshot.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#travel-gallery p {
+  margin-top: 400px;
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 
 @media (max-width: 1049px) {
@@ -257,7 +303,7 @@ h3 {
     align-items: center;
     flex-direction: column;
     padding-top: 60px;
-    height: auto;
+    height: 100vh;
     margin-bottom: 20px; /* Ensure there's space for following elements */
   }
 
@@ -286,9 +332,14 @@ h3 {
     margin-top: 300px;
   }
 
+  .projects-section h1 {
+    margin-top: 40vh;
+  }
+
   .projects-container {
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
+    padding-bottom: 200px;
+    gap: 100px;
   }
 }
